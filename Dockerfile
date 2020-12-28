@@ -10,8 +10,7 @@ RUN apt-get update && apt-get install -y \
      && docker-php-ext-configure gd --with-freetype --with-jpeg \
      && docker-php-ext-install -j$(nproc) gd \
      && pecl install redis-5.3.2 \
-     && docker-php-ext-enable redis \
-     && apt autoremove
+     && docker-php-ext-enable redis
 
 RUN cp php.ini-production /usr/local/php/etc/php.ini
 
