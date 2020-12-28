@@ -13,5 +13,6 @@ RUN apt-get update && apt-get install -y \
      && docker-php-ext-enable redis \
      && apt-get clean \
      && apt-get autoclean
+     && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 MAINTAINER 594652523@qq.com
