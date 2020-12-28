@@ -10,9 +10,4 @@ RUN apt-get update && apt-get install -y \
      && docker-php-ext-configure gd --with-freetype --with-jpeg \
      && docker-php-ext-install -j$(nproc) gd \
      && pecl install redis-5.3.2 \
-     && docker-php-ext-enable redis \
-     && docker-php-ext-install opcache \
-     && docker-php-ext-install bcmath \
-     && docker-php-ext-install zip \
-     && docker-php-ext-install soap \
-     && docker-php-ext-install swoole
+     && docker-php-ext-enable redis 
