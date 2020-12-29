@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
      && docker-php-ext-install mysqli pdo pdo_mysql \
      && apt-get clean \
      && apt-get autoclean \
-     && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+     && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
+     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 MAINTAINER 594652523@qq.com
