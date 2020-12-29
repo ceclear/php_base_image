@@ -18,4 +18,4 @@ RUN apt-get update && apt-get install -y \
      && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
      && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-MAINTAINER 594652523@qq.com
+MAINTAINER ceclear<594652523@qq.com>
