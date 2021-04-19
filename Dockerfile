@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
      && apt-get clean \
      && apt-get autoclean \
      && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
-     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+     && cp /home/www/error.ini /usr/local/etc/php/conf.d
 
 MAINTAINER ceclear<594652523@qq.com>
