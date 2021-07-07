@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
          libpng-dev \
          libssl-dev \
          libzip-dev \
+         librabbitmq-dev \
      && apt-get autoclean && apt-get clean \
      && docker-php-ext-configure gd --with-freetype --with-jpeg \
      && docker-php-ext-install -j$(nproc) gd \
