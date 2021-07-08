@@ -6,13 +6,14 @@ RUN apt-get update && apt-get install -y \
          libpng-dev \
          libssl-dev \
          libzip-dev \
-         librabbitmq-dev \
+         librabbitmq-dev\
      && apt-get autoclean && apt-get clean \
      && docker-php-ext-configure gd --with-freetype --with-jpeg \
      && docker-php-ext-install -j$(nproc) gd \
      && pecl install redis-5.3.2 \
-     && docker-php-ext-install amqp \
+     && pecl install amqp \
      && docker-php-ext-enable redis \
+     && docker-php-ext-enable amqp \
      && docker-php-ext-install zip \
      && docker-php-ext-install mysqli pdo pdo_mysql \
      && apt-get clean \
